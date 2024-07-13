@@ -32,8 +32,7 @@ img{
 .header-container{
     display: flex;
     align-items: center;
-
-
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1 , 0.08;
 }
 .header-navigation{
     display: flex;
@@ -136,7 +135,7 @@ address{font-style: normal}
         .button{
             margin: 0 auto;
             max-width: 1440px;
-            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1.jpg);
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/img-people-office.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -171,6 +170,7 @@ address{font-style: normal}
             min-width: 169px;
             margin: 0 auto;
             margin-top:48px;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
         .main-button:hover,
         .main-button:focus{background-color: #404BBF}
@@ -219,13 +219,14 @@ address{font-style: normal}
             width: 100%;
             max-height: 112px;
             background-color: #f4f4fd;
-            border: 1px;
+            border: 1px solid #8e8f99;
             border-color: 000000;
             border-radius: 4px;
             box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-bottom: 8px;
         }
 /*================Team=========================*/
 .team{background:#F4F4FD;
@@ -250,9 +251,10 @@ address{font-style: normal}
     background-color: #FFFFFF;
     width:calc((100% - 72px) / 4); 
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2 , 66, 0.08;
 }
 .container-name{
-    padding: 32px 16px;
+    padding: 32px 0px;
     
 }
 .advantages-title-team{
@@ -269,7 +271,8 @@ address{font-style: normal}
 }
 .socicon-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 24px;
     margin-top: 8px;
 }
 .socicon-item {
@@ -284,13 +287,14 @@ address{font-style: normal}
     justify-content: center;
     align-items: center;
     background-color: #4D5AE5;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socicon-icon {
-    fill: #ffffff;
+    fill: #f4f4fd;
 }
-.socicon-link:hover{
-    background-color: #31D0AA;
+.socicon-link:hover,
+.socicon-link:focus{
+    background-color: #31d0aa;
 }
 /*====================Portfolio==============*/
 .portfolio {
@@ -307,6 +311,7 @@ address{font-style: normal}
 .portfolio-list-item {
     width:calc((100% - 48px) / 3);
     position: relative;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-list-item:hover .portfolio-list-item-text{
     transform: translateY(0%);
@@ -327,8 +332,10 @@ address{font-style: normal}
     letter-spacing: 0.02em;
     padding: 40px 32px;
     height: 100%;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16) 46, 47, 66, 0.08;
     transform: translateY(100%);
-    transition: transform 300ms linear;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .container-app{
     padding: 32px 16px;
@@ -359,14 +366,18 @@ address{font-style: normal}
 }
 .container.double-container{
     display: flex;
-    gap: 120px;
+    align-items: baseline;
+}
+.container-footer-logo{
+    margin-right: 120px;
 }
 .footer-text-soc{
     font-weight: 500;
     font-size:16px;
     line-height: 1.5;
-    color: #F4F4FD;
+    color: #ffffff;
     letter-spacing: 0.02em;
+    margin-bottom: 16px;
 }
 .socicon-list-footer{
     gap: 16px;
